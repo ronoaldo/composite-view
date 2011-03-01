@@ -1,0 +1,35 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>composite-view</groupId>
+	<artifactId>composite-view</artifactId>
+	<name>Composite View</name>
+	<version>0.0.1-SNAPSHOT</version>
+	<description>Simple implementation for composite view in JSP</description>
+	<url>http://code.ronoaldo.net/composite-view/overview</url>
+	<issueManagement>
+		<system>Bitbucket</system>
+	</issueManagement>
+	<scm>
+		<developerConnection>Ronoaldo</developerConnection>
+		<url>scm:hg:http://bitbucket.org/ronoaldo/composite-view</url>
+	</scm>
+	<organization>
+		<name>Ronoaldo Consulting</name>
+		<url>http://www.ronoaldo.net</url>
+	</organization>
+	<dependencies>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>2.0</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+</project>

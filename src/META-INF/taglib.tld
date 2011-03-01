@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE taglib PUBLIC
+ "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN"
+ "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+<taglib>
+	<tlib-version>1.2</tlib-version>
+	<jsp-version>2.0</jsp-version>
+	<short-name>template-utils</short-name>
+	<description>Several utilities for templating with JSP and JSTL</description>
+
+	<tag>
+		<name>extends</name>
+		<tag-class>net.ronoaldo.tools.templateutils.tags.Extends</tag-class>
+		<body-content>scriptless</body-content>
+		<attribute>
+			<name>template</name>
+			<required>true</required>
+			<type>java.lang.String</type>
+			<description>Indicates the parent template to extends from.</description>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>block</name>
+		<tag-class>net.ronoaldo.tools.templateutils.tags.Block</tag-class>
+		<body-content>scriptless</body-content>
+		<attribute>
+			<name>name</name>
+			<required>true</required>
+			<type>java.lang.String</type>
+			<description>The block name, unique across all template and its
+				extensions</description>
+		</attribute>
+	</tag>
+
+</taglib>
