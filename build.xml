@@ -70,6 +70,9 @@
 				<include name="**/*.class" />
 				<include name="META-INF/*" />
 			</fileset>
+			<fileset dir="src">
+				<include name="META-INF/**" />
+			</fileset>
 		</jar>
 	</target>
 

@@ -4,13 +4,13 @@
  "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
 <taglib>
 	<tlib-version>1.2</tlib-version>
-	<jsp-version>2.0</jsp-version>
-	<short-name>template-utils</short-name>
-	<description>Several utilities for templating with JSP and JSTL</description>
+	<jsp-version>2.1</jsp-version>
+	<short-name>composite-view</short-name>
+	<description>Simple implementation of composite-view with JSP and JSTL</description>
 
 	<tag>
 		<name>extends</name>
-		<tag-class>net.ronoaldo.tools.templateutils.tags.Extends</tag-class>
+		<tag-class>net.ronoaldo.tools.compositeview.tags.Extends</tag-class>
 		<body-content>scriptless</body-content>
 		<attribute>
 			<name>template</name>
@@ -22,7 +22,7 @@
 
 	<tag>
 		<name>block</name>
-		<tag-class>net.ronoaldo.tools.templateutils.tags.Block</tag-class>
+		<tag-class>net.ronoaldo.tools.compositeview.tags.Block</tag-class>
 		<body-content>scriptless</body-content>
 		<attribute>
 			<name>name</name>
