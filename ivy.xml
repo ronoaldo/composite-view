@@ -4,7 +4,8 @@
     <info
         organisation="net.ronoaldo.code"
         module="composite-view"
-        status="integration">
+        status="integration"
+        revision="1.0-SNAPSHOT">
 	</info>
 	<configurations>
 		<conf name="default"/>

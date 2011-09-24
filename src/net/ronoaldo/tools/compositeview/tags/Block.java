@@ -15,7 +15,7 @@ import javax.servlet.jsp.tagext.SimpleTagSupport;
 
 /**
  * Tag simples que define um bloco de template.
- *
+ * 
  * @author Ronoaldo Pereira &lt;ronoaldo@ronoaldo.net&gt;
  */
 public class Block extends SimpleTagSupport {
@@ -38,7 +38,7 @@ public class Block extends SimpleTagSupport {
 
 	/**
 	 * Setter para o atributo name, que identifica unicamente o bloco.
-	 *
+	 * 
 	 * @param name
 	 *            o nome do bloco.
 	 */
@@ -61,7 +61,7 @@ public class Block extends SimpleTagSupport {
 	/**
 	 * Atualiza o conteúdo em cache do bloco, caso ele ainda não tenha sido
 	 * definido.
-	 *
+	 * 
 	 * @throws JspException
 	 * @throws IOException
 	 */
@@ -76,13 +76,13 @@ public class Block extends SimpleTagSupport {
 			body.invoke(sw);
 		}
 		getRegistry().put(blockName, sw.toString());
-		logger.info(String.format("Content for block %s updated to %s",
+		logger.fine(String.format("Content for block %s updated to %s",
 				blockName, sw.toString()));
 	}
 
 	/**
 	 * Renderiza o bloco na página JSP.
-	 *
+	 * 
 	 * @throws JspException
 	 * @throws IOException
 	 */
@@ -96,7 +96,7 @@ public class Block extends SimpleTagSupport {
 	/**
 	 * Identifica se esta tag {@link Block} está dentro de uma tag
 	 * {@link Extends}.
-	 *
+	 * 
 	 * @return
 	 */
 	private boolean withinExtendsBlock() {
@@ -106,7 +106,7 @@ public class Block extends SimpleTagSupport {
 	/**
 	 * Recupera ou cria um registro no escopo da requisição, para armazenar os
 	 * buffers dos blocos da página a ser exibida.
-	 *
+	 * 
 	 * @return um {@link Map} contendo os valores associados ao nome do bloco.
 	 */
 	private Map<String, String> getRegistry() {

@@ -1,0 +1,19 @@
+<ivysettings>
+	<property name="revision" value="SNAPSHOT" override="false" />
+	<settings
+		defaultResolver="chain-repository" /> 
+	<resolvers>
+		<!-- Repositórios externos -->
+		<ibiblio name="maven-central" m2compatible="true" />
+		<!-- Repositórios do host local -->
+		<filesystem name="local-repository" changingPattern="*" checkmodified="true">
+			<ivy pattern="${user.home}/.ivy2/local-repository/[organisation]/[module]/ivys/ivy-[revision].xml"/>
+			<artifact pattern="${user.home}/.ivy2/local-repository/[organisation]/[module]/[type]s/[artifact]-[revision].[ext]"/>			
+		</filesystem>
+		<!-- Default merge resolver -->
+		<chain name="chain-repository" changingPattern="*" checkmodified="true">
+			<resolver ref="maven-central" />
+			<resolver ref="local-repository" />
+		</chain>
+	</resolvers>
+</ivysettings>
