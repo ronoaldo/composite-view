@@ -5,15 +5,19 @@
 	<resolvers>
 		<!-- Repositórios externos -->
 		<ibiblio name="maven-central" m2compatible="true" />
+        <ibiblio name="objectify-repository" m2compatible="true" root="http://objectify-appengine.googlecode.com/svn/maven" />
+		<ibiblio name="dropbox-ronoaldo" m2compatible="true" root="http://dl.dropbox.com/u/7660016/ivy/" />
 		<!-- Repositórios do host local -->
 		<filesystem name="local-repository" changingPattern="*" checkmodified="true">
-			<ivy pattern="${user.home}/.ivy2/local-repository/[organisation]/[module]/ivys/ivy-[revision].xml"/>
-			<artifact pattern="${user.home}/.ivy2/local-repository/[organisation]/[module]/[type]s/[artifact]-[revision].[ext]"/>			
+			<ivy pattern="${user.home}/Dropbox/Public/ivy/[organisation]/[module]/ivys/ivy-[revision].xml"/>
+			<artifact pattern="${user.home}/Dropbox/Public/ivy/[organisation]/[module]/[type]s/[artifact]-[revision].[ext]"/>			
 		</filesystem>
 		<!-- Default merge resolver -->
 		<chain name="chain-repository" changingPattern="*" checkmodified="true">
 			<resolver ref="maven-central" />
 			<resolver ref="local-repository" />
+			<resolver ref="dropbox-ronoaldo" />
+            <resolver ref="objectify-repository" />
 		</chain>
 	</resolvers>
 </ivysettings>
