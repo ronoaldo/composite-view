@@ -14,6 +14,16 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
+	<build>
+		<extensions>
+			<extension>
+				<groupId>org.springframework.build</groupId>
+				<artifactId>aws-maven</artifactId>
+				<version>4.4.0.RELEASE</version>
+			</extension>
+		</extensions>
+	</build>
+
 	<dependencies>
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -27,7 +37,7 @@
 			<version>2.0</version>
 			<scope>provided</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -35,4 +45,47 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
+	<distributionManagement>
+		<site>
+			<id>maven-s3-site</id>
+			<name>S3 Maven Site</name>
+			<url>s3://repository.ronoaldo.net/sites/composite-view</url>
+		</site>
+		<repository>
+			<id>ronoaldo-repository</id>
+			<name>S3 Release Repository</name>
+			<url>s3://repository.ronoaldo.net/release</url>
+		</repository>
+		<snapshotRepository>
+			<id>ronoaldo-snapshot-repository</id>
+			<name>S3 Snapshot Repository</name>
+			<url>s3://repository.ronoaldo.net/snapshot</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<repositories>
+		<repository>
+			<id>ronoaldo-repository</id>
+			<name>S3 Release Repository</name>
+			<url>s3://repository.ronoaldo.net/release</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>ronoaldo-snapshot-repository</id>
+			<name>S3 Snapshot Repository</name>
+			<url>s3://repository.ronoaldo.net/snapshot</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
 </project>
