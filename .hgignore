@@ -5,3 +5,6 @@ doc
 lib
 bin
 test-bin
+.project
+.classpath
+.settings
