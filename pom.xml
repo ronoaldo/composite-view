@@ -2,27 +2,20 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>net.ronoaldo.code</groupId>
+	<parent>
+		<groupId>com.ronoaldo</groupId>
+		<artifactId>ronoaldo</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+
+	<groupId>com.ronoaldo.tools</groupId>
 	<artifactId>composite-view</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>composite-view</name>
-	<url>http://maven.apache.org</url>
-
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
-
-	<build>
-		<extensions>
-			<extension>
-				<groupId>org.springframework.build</groupId>
-				<artifactId>aws-maven</artifactId>
-				<version>4.4.0.RELEASE</version>
-			</extension>
-		</extensions>
-	</build>
+	<url>http://code.ronoaldo.net/composite-view/</url>
+	<inceptionYear>2011</inceptionYear>
 
 	<dependencies>
 		<dependency>
@@ -45,47 +38,4 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
-	<distributionManagement>
-		<site>
-			<id>maven-s3-site</id>
-			<name>S3 Maven Site</name>
-			<url>s3://repository.ronoaldo.net/sites/composite-view</url>
-		</site>
-		<repository>
-			<id>ronoaldo-repository</id>
-			<name>S3 Release Repository</name>
-			<url>s3://repository.ronoaldo.net/release</url>
-		</repository>
-		<snapshotRepository>
-			<id>ronoaldo-snapshot-repository</id>
-			<name>S3 Snapshot Repository</name>
-			<url>s3://repository.ronoaldo.net/snapshot</url>
-		</snapshotRepository>
-	</distributionManagement>
-
-	<repositories>
-		<repository>
-			<id>ronoaldo-repository</id>
-			<name>S3 Release Repository</name>
-			<url>s3://repository.ronoaldo.net/release</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-		<repository>
-			<id>ronoaldo-snapshot-repository</id>
-			<name>S3 Snapshot Repository</name>
-			<url>s3://repository.ronoaldo.net/snapshot</url>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-	</repositories>
 </project>
