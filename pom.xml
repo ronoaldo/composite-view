@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>com.ronoaldo</groupId>
 		<artifactId>ronoaldo</artifactId>
-		<version>1.0-SNAPSHOT</version>
+		<version>1.0</version>
 	</parent>
 
 	<groupId>com.ronoaldo.tools</groupId>
@@ -17,6 +17,16 @@
 	<url>http://code.ronoaldo.net/composite-view/</url>
 	<inceptionYear>2011</inceptionYear>
 
+	<issueManagement>
+		<system>Bitbucket</system>
+		<url>http://bitbucket.org/ronoaldo/composite-view/issues</url>
+	</issueManagement>
+	<scm>
+		<connection>scm:hg:https://bitbucket.org/ronoaldo/composite-view</connection>
+		<url>https://bitbucket.org/ronoaldo/composite-view</url>
+	  <tag>HEAD</tag>
+  </scm>
+	
 	<dependencies>
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -38,4 +48,11 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	
+	<repositories>
+		<repository>
+			<id>ronoaldo-repository</id>
+			<url>http://repository.ronoaldo.net/maven/release/</url>
+		</repository>
+	</repositories>
 </project>
