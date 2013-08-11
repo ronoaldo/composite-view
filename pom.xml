@@ -9,7 +9,7 @@
 
 	<groupId>com.ronoaldo.tools</groupId>
 	<artifactId>composite-view</artifactId>
-	<version>1.0</version>
+	<version>1.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>composite-view</name>
@@ -23,7 +23,7 @@
 	<scm>
 		<connection>scm:hg:https://bitbucket.org/ronoaldo/composite-view</connection>
 		<url>https://bitbucket.org/ronoaldo/composite-view</url>
-	  <tag>composite-view-1.0</tag>
+	  <tag>HEAD</tag>
   </scm>
 	
 	<dependencies>
