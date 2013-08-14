@@ -13,7 +13,7 @@
 	<packaging>jar</packaging>
 
 	<name>composite-view</name>
-	<url>http://code.ronoaldo.net/composite-view/</url>
+	<url>http://repository.ronoaldo.net/maven/site/composite-view/</url>
 	<inceptionYear>2011</inceptionYear>
 
 	<issueManagement>
